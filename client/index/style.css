@@ -1,0 +1,323 @@
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+body{
+  padding: 0px;
+  margin: 0px;
+}
+button{
+  transition-duration: 0.4s;
+}
+button:hover{
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.286);
+}
+.navigation{
+  position: fixed;
+  top: -80px;
+  z-index: 3;
+  width: 100%;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.8);
+  transition-duration: 0.8s;
+}
+.navigation:hover{
+  background: rgb(0, 0, 0);
+}
+.navigation button{
+  position: absolute;
+  border: none;
+  background: none;
+  height: 80px;
+  width: 250px;
+  color: white;
+  border-left: 2px solid black;
+  font-family: Raleway;
+  font-size: 22px;
+  transition-duration: 0.4s;
+}
+
+.navigation button:hover{
+  background: rgba(255, 255, 255, 0.3);
+}
+.navigation button:active{
+  background: rgba(255, 255, 255, 0.6);
+}
+#homebutton{ right: 500px }
+#projectbutton{ right: 250px }
+#contactbutton{ right: 0px }
+
+.top{
+  position: absolute;
+  background: url(/images/titlebackground.png);
+  width: 100%;
+  height: 115vh;
+  top: -50px;
+}
+
+.starterContainer {
+    position: relative;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -45%);
+    display: grid;
+    justify-items: center;
+}
+
+#name {
+    position: relative;
+    top: 20px;
+    font-size: 78px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px grey;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: auto;
+    width: 100%;
+}
+
+#saying {
+    position: relative;
+    top: -20px;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.733);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+.buttonline {
+  display: flex;
+  flex-direction: row;
+  flex-gap: 20px;
+  gap: 20px;
+}
+.buttonline > *{
+  background: rgba(255, 255, 255, 0);
+  width: 150px;
+  height: 40px;
+  border-radius: 12px;
+  border: 2px solid black;
+  color: white;
+  font-size: 1.125em;
+  font-family: Lato, sans-serif;
+}
+
+.links {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+}
+.links > * {
+    margin: 20px;
+    width: 50px;
+    opacity: 0.5;
+    transition-duration: 0.4s;
+}
+.links:hover > * {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#divbreakgrad{
+  position: absolute;
+  top: -51px;
+  background: black;
+  width: 100%;
+  height: 10px;
+  -webkit-transform: skewY(-2deg);
+  -moz-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
+  -o-transform: skewY(-2deg);
+  transform: skewY(-2deg);
+}
+#whitediagonal{
+  position: absolute;
+  background: white;
+  height: 100px;
+  top: -46px;
+  width: 100%;
+  -webkit-transform: skewY(-2deg);
+  -moz-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
+  -o-transform: skewY(-2deg);
+  transform: skewY(-2deg);
+}
+.content{
+  position: absolute;
+  top: 115vh;
+  width: 100%;
+  height: auto;
+  background: white;
+}
+.projects{
+  position: relative;
+  top: 80px;
+  margin-bottom: 140px;
+}
+.projects .title{
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-family: Raleway, sans-serif;
+}
+.indivprojects{
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: auto;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  width: 27vw;
+  height: 27vw;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 5px 15px 5px 15px;
+  margin: auto;
+  transition-duration: 0.4s;
+}
+
+.project:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 8px black;
+}
+.projectimage{ 
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.ptitle{
+  position: relative;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 32px;
+  z-index: 2;
+  font-weight: 300;
+}
+.pwords{
+  position: relative;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 20px;
+  z-index: 2;
+  font-weight: 400;
+}
+.pbuttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+.pbuttons > * {
+  border-radius: 17px;
+  height: 34px;
+  width: 170px;
+  border: 1px solid red;
+  background: rgba(255, 38, 0, 0.2);
+  z-index: 10;
+  transition-duration: 0.4s;
+}
+.pbuttons > *:hover {
+    cursor: pointer;
+    background: rgba(255, 38, 0, 0.4);
+}
+.allprojects{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 40px;
+  width: 100%;
+}
+.allprojects button{
+  position: relative;
+  width: 250px;
+  height: 50px;
+  background: coral;
+  border: 2px solid red;
+  border-radius: 6px;
+  font-family: Raleway;
+  font-size: 24px;
+  text-align: center;
+}
+.aboutme{
+  position: relative;
+  display: flex;
+  width: 100%;
+  top: 40px;
+  justify-content: center;
+}
+.aboutme p{
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  max-width: 80vw;
+  text-align: center;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 1200px){
+  body{ padding: 0px; }
+  .navigation{ background: #000 }
+}
+@media screen and (max-width: 640px){
+  body{ padding: 0px; }
+  #name{ font-size: 60px; }
+  .buttonline {
+    flex-direction: column;
+  }
+  .project {
+    width: 80vw;
+    height: 70vw;
+    margin: 20px auto 20px auto;
+  }
+  .indivprojects{
+    display: block;
+    width: 100vw;
+    height: auto;
+  }
+}
+@media screen and (max-width: 470px){
+  body{ padding: 0px; }
+  #name{ font-size: 40px; }
+  .project {
+    width: 80vw;
+    height: 70vw;
+    margin: 20px auto 20px auto;
+  }
+  .indivprojects{
+    display: block;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    flex: 1 1 0px;
+    opacity: 0.8;
+  }
+  .navigation button {
+    position: relative;
+  }
+  #homebutton{ right: auto }
+  #projectbutton{ right: auto }
+  #contactbutton{ right: auto }
+}

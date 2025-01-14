@@ -1,0 +1,51 @@
+{
+    "links": {
+        "Replit": {
+            "link": "https://replit.com/@seanlnge",
+            "image": "replit.png"
+        },
+        "Github": {
+            "link": "https://github.com/seanlnge",
+            "image": "github.png"
+        }
+    },
+    "highlights": ["Imgscrpr", "Threespective", "Roe Bros Pizza"],
+    "projects": {
+        "Imgscrpr": {
+            "description": "Personalized and adaptive Reddit feed for Discord servers using Typescript/Node.js as a backend",
+            "link": "https://top.gg/bot/904018497657532447",
+            "image": "imgscrpr.png",
+            "code": "https://github.com/seanlnge/imgscrpr/tree/master"
+        },
+        "Threespective": {
+            "description": "Simulation of a 2D cross section of a 3D world using linear algebra, Voronoi cells, and the HTML5 Canvas",
+            "link": "https://threespective.replit.app",
+            "image": "threespective.png",
+            "code": "https://replit.com/@seanlnge/Threespective"
+        },
+        "Roe Bros Pizza": {
+            "description": "Single page website that I made for a local pizza company operating in my area.",
+            "link": "https://roe-bros-pizza.replit.app",
+            "image": "roebrospizza.png",
+            "code": "https://replit.com/@seanlnge/Roe-Bros-Pizza"
+        },
+        "Domain Coloring": {
+            "description": "Tool to help visualize transformations on the complex plane.",
+            "link": "https://domain-coloring-seanlnge.replit.app",
+            "image": "domaincoloring.png",
+            "code": "https://replit.com/@seanlnge/Domain-Coloring"
+        },
+        "Renderspice": {
+            "description": "A 2D game engine for the web that utilizes the HTML canvas.",
+            "link": "https://renderspice-docs.replit.app/",
+            "image": "renderspice.png",
+            "code": "https://github.com/seanlnge/Renderspice"
+        },
+        "Spicefall": {
+            "description": "My entry for the Kajam 2022 competition, utilizing the Kaboom game engine and typescript.",
+            "link": "https://spicefall.replit.app",
+            "image": "spicefall.png",
+            "code": "https://replit.com/@seanlnge/Spicefall"
+        }
+    }
+}

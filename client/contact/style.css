@@ -1,0 +1,83 @@
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+body{
+  padding: 0px;
+  margin: 0px;
+}
+.navigation{
+  position: fixed;
+  top: 0px;
+  z-index: 3;
+  width: 100%;
+  height: 80px;
+  background: rgba(0, 0, 0);
+  transition-duration: 0.5s;
+}
+.navigation button{
+  position: absolute;
+  border: none;
+  background: none;
+  height: 80px;
+  width: 250px;
+  color: white;
+  border-left: 2px solid black;
+  font-family: Raleway;
+  font-size: 22px;
+  transition-duration: 0.4s;
+}
+
+.navigation button:hover{
+  background: rgba(255, 255, 255, 0.3);
+}
+.navigation button:active{
+  background: rgba(255, 255, 255, 0.6);
+}
+#homebutton{ right: 500px }
+#projectbutton{ right: 250px }
+#contactbutton{ right: 0px }
+
+.gradientBox {
+    position: absolute;
+    bottom: -8px;
+    background: url(/images/navback.png);
+    height: 8px;
+    background-size: 200px 8px;
+    width: 100vw;
+}
+
+.content {
+    position: relative;
+    top: 80px;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 36px;
+    font-size: 1.25em;
+    font-family: Raleway;
+}
+.info > p > span {
+    font-family: Roboto;
+}
+
+@media screen and (max-width: 750px) {
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    flex: 1 1 0px;
+    opacity: 0.8;
+  }
+  .navigation button {
+    position: relative;
+  }
+  #homebutton{ right: auto }
+  #projectbutton{ right: auto }
+  #contactbutton{ right: auto }
+}

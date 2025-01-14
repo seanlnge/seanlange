@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sean Lange's Projects</title>
+    <link href="/client/projects/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <nav class="navigation">
+        <button id="homebutton" onclick="location.href='/'">Home</button>
+        <button id="projectbutton">Projects</button>
+        <button id="contactbutton" onclick="location.href='contact'">Contact</button>
+        <div class="gradientBox"></div>
+    </nav>
+    
+    <div class="projects">
+      <h2 class="title">Projects</h2>
+      <div class="indivprojects">
+        <% for(let name in projects.projects) { let project = projects.projects[name] %>
+            <div>
+                <img src="/images/<%= project.image %>" class="projectimage" draggable="false">
+                <h2 class="ptitle"><%= name %></h2>
+                <div class="pwords">
+                    <p><%= project.description %></p>
+                    <div class="pbuttons">
+                      <button onclick="window.open('<%= project.code %>');">View Code</button>
+                      <button onclick="window.open('<%= project.link %>');">View Project</button>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+      </div>
+      
+    </div>
+    <script src="projects.js"></script>
+  </body>
+</html>
