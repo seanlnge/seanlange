@@ -9,43 +9,55 @@
             "image": "github.png"
         }
     },
-    "highlights": ["Imgscrpr", "Threespective", "Roe Bros Pizza"],
+    "highlights": ["BuyBetter", "SiteGEN", "Spicefall"],
     "projects": {
+        "BuyBetter": {
+            "description": "My entry for the ShellHacks 2024 hackathon. Webapp that takes in receipts to find personalized resources assisting in finding cheaper purchase alternatives, made with a vanilla Typescript Node.JS backend.",
+            "link": "https://buybetter-seanlnge.replit.app/",
+            "image": "buybetter.png",
+            "code": "https://github.com/seanlnge/buybetter/tree/master"
+        },
+        "SiteGEN": {
+            "description": "Application utilizing webscrapers and OpenAI APIs to automate the creation of a static website using user-provided social media data to customize a diverse range of HTML/CSS templates.",
+            "link": "https://github.com/seanlnge/sitegen/blob/main/README.md",
+            "image": "sitegen.png",
+            "code": "https://github.com/seanlnge/sitegen/tree/master"
+        },
         "Imgscrpr": {
-            "description": "Personalized and adaptive Reddit feed for Discord servers using Typescript/Node.js as a backend",
+            "description": "Discord bot creating a personalized and adaptive Reddit feed through an ordered graph of all subreddit relations, with MongoDB, Typescript, and Node.JS under the hood.",
             "link": "https://top.gg/bot/904018497657532447",
             "image": "imgscrpr.png",
             "code": "https://github.com/seanlnge/imgscrpr/tree/master"
         },
         "Threespective": {
-            "description": "Simulation of a 2D cross section of a 3D world using linear algebra, Voronoi cells, and the HTML5 Canvas",
+            "description": "View three dimensional space in another way through a 2D cross section simulation. Built using linear algebra, height map made with Voronoi cells, and strictly rendering in the HTML5 canvas.",
             "link": "https://threespective.replit.app",
             "image": "threespective.png",
             "code": "https://replit.com/@seanlnge/Threespective"
         },
         "Roe Bros Pizza": {
-            "description": "Single page website that I made for a local pizza company operating in my area.",
+            "description": "Single page website that made for a local pizza company operating in my area. Written in vanilla HTML and CSS.",
             "link": "https://roe-bros-pizza.replit.app",
             "image": "roebrospizza.png",
             "code": "https://replit.com/@seanlnge/Roe-Bros-Pizza"
+        },
+        "Renderspice": {
+            "description": "A 2D game engine for the web that strictly uses the HTML canvas, and was built in pure Javascript code.",
+            "link": "https://renderspice-docs.replit.app/",
+            "image": "renderspice.png",
+            "code": "https://github.com/seanlnge/Renderspice"
+        },
+        "Spicefall": {
+            "description": "My entry for the Kajam 2022 competition, utilizing the Kaboom game engine and Typescript, and built in under a week.",
+            "link": "https://spicefall.replit.app",
+            "image": "spicefall.png",
+            "code": "https://replit.com/@seanlnge/Spicefall"
         },
         "Domain Coloring": {
             "description": "Tool to help visualize transformations on the complex plane.",
             "link": "https://domain-coloring-seanlnge.replit.app",
             "image": "domaincoloring.png",
             "code": "https://replit.com/@seanlnge/Domain-Coloring"
-        },
-        "Renderspice": {
-            "description": "A 2D game engine for the web that utilizes the HTML canvas.",
-            "link": "https://renderspice-docs.replit.app/",
-            "image": "renderspice.png",
-            "code": "https://github.com/seanlnge/Renderspice"
-        },
-        "Spicefall": {
-            "description": "My entry for the Kajam 2022 competition, utilizing the Kaboom game engine and typescript.",
-            "link": "https://spicefall.replit.app",
-            "image": "spicefall.png",
-            "code": "https://replit.com/@seanlnge/Spicefall"
         }
     }
 }

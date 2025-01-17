@@ -15,13 +15,18 @@
         <button id="contactbutton" onclick="location.href='contact'">Contact</button>
     </nav>
     <div class="top">
+        <canvas id="rsc"></canvas>
         <div class="starterContainer">
-            <h1 id="name">Sean Lange</h1>
-            <p id="saying">I enjoy programming in Typescript using Node.js and other JS frameworks for server-side applications.</p>
+            <div class="nameBox">
+                <h1 id="name1">Sean Lange</h1>
+                <h1 id="name2">Sean Lange</h1>
+                <h1 id="name3">Sean Lange</h1>
+            </div>
+            <p class="saying">University of South Florida&emsp;///&emsp;Largo, Florida, 33774<br /><br />Typescript&emsp;///&emsp;Node.JS&emsp;///&emsp;React&emsp;///&emsp;NextJS&emsp;///&emsp;HTML&emsp;///&emsp;CSS</p>
             <div class="buttonline">
-                <button onclick="window.location='projects'">Projects</button>
-                <button onclick="window.location='https://sean-lange.replit.app/client/media/resume.pdf'">Resume</button>
-                <button onclick="window.location='contact'">Contact</button>
+                <button class="buttonline1" onclick="window.location='projects'">Projects</button>
+                <button class="buttonline2" onclick="window.location='https://seanlange.dev/client/media/resume.pdf'">Resume</button>
+                <button class="buttonline3" onclick="window.location='contact'">Contact</button>
             </div>
         </div>
         <div class="links">
@@ -35,7 +40,7 @@
         <div id="whitediagonal"></div>
 
         <div class="aboutme">
-            <p>I am an upcoming freshman at the University of South Florida, and have been programming for 6 years. I originally started programming in the summer before 7th grade when I wanted to create a Pi calculator in Python. This project was very simple, however in finishing it, I felt a feeling of joy that propelled me to improve and learn about coding and its applications.<br><br>In the past, I have made games using the HTML canvas, and since the end of 2019, have been focused on building web applications using Node.js and typescript as a backend. I am highly proficient with Javascript, and also have experience programming in Python, Java, Dart, and Rust.</p>
+            <p>I am a freshman at the University of South Florida, and have been programming for >6 years. I originally started programming in the summer before 7th grade when I wanted to create a Pi calculator in Python. This project was very simple, however in finishing it, I felt a feeling of joy that propelled me to improve and learn about coding and its applications.<br><br>In the past, I have made games using the HTML canvas, and since the end of 2019, have been focused on building web applications using Node.js and Typescript. I am highly proficient with Javascript/Typescript, and also have experience programming in Python, Java, Dart, and Rust.</p>
         </div>
 
         <div class="projects">
@@ -48,8 +53,8 @@
                         <div class="pwords">
                             <p><%= project.description %></p>
                             <div class="pbuttons">
-                            <button onclick="window.open('<%= project.code %>');">View Code</button>
-                            <button onclick="window.open('<%= project.link %>');">View Project</button>
+                                <button onclick="window.open('<%= project.code %>');">View Code</button>
+                                <button onclick="window.open('<%= project.link %>');">View Project</button>
                             </div>
                         </div>
                     </div>
@@ -60,5 +65,8 @@
             </div>
         </div>
     </div>
+    <canvas class="fade"></canvas>
+    
+    <script src="/client/renderspice.js"></script>
     <script src="/client/index/script.js"></script>
 </body>

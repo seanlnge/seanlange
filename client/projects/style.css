@@ -1,42 +1,47 @@
-html{
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
+
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 body{
-  padding: 0px;
-  margin: 0px;
+    padding: 0px;
+    margin: 0px;
 }
+
 .navigation{
-  position: fixed;
-  top: 0px;
-  z-index: 3;
-  width: 100%;
-  height: 80px;
-  background: rgba(0, 0, 0);
-  transition-duration: 0.5s;
+    position: fixed;
+    top: 0px;
+    z-index: 3;
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0);
+    transition-duration: 0.5s;
 }
+
 .navigation button{
-  position: absolute;
-  border: none;
-  background: none;
-  height: 80px;
-  width: 250px;
-  color: white;
-  border-left: 2px solid black;
-  font-family: Raleway;
-  font-size: 22px;
-  transition-duration: 0.4s;
+    position: absolute;
+    border: none;
+    background: none;
+    height: 80px;
+    width: 250px;
+    color: white;
+    border-left: 2px solid black;
+    font-family: Raleway;
+    font-size: 22px;
+    transition-duration: 0.4s;
 }
 
 .navigation button:hover{
-  background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3);
 }
 .navigation button:active{
-  background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.6);
 }
+
 #homebutton{ right: 500px }
 #projectbutton{ right: 250px }
 #contactbutton{ right: 0px }
@@ -51,131 +56,189 @@ body{
 }
 
 .projects{
-  position: relative;
-  top: 80px;
+    position: relative;
+    top: 80px;
 }
 .projects .title{
-  width: 100%;
-  text-align: center;
-  font-size: 40px;
-  font-family: Raleway, sans-serif;
+    width: 100%;
+    margin: 80px 0;
+    text-align: center;
+    font-size: 40px;
+    font-family: Raleway, sans-serif;
 }
 .indivprojects{
-  position: relative;
-  display: flex;
-  width: 100vw;
-  height: auto;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
 }
-.indivprojects > *{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  position: relative;
-  width: 27vw;
-  height: 27vw;
-  border: 2px solid black;
-  border-radius: 8px;
-  padding: 5px 15px 15px 5px;
-  margin: 20px;
-  transition-duration: 0.5s;
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 27vw;
+    height: 27vw;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin: 20px;
+    transition-duration: 0.5s;
 }
-.indivprojects > *:hover{
-  box-shadow: 0px 0px 4px grey;
+.project:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 8px black;
 }
 .projectimage{ 
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  opacity: 0.25;
-  z-index: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 1;
 }
 
+
+
 .ptitle{
-  text-align: center;
-  font-family: Roboto;
-  font-size: 32px;
-  z-index: 2;
+    position: relative;
+    text-align: center;
+    font-family: Lato, 'Segoe UI', sans-serif;
+    font-size: 36px;
+    z-index: 2;
+    letter-spacing: 2px;
+    font-weight: 800;
 }
-.pbuttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
-}
+
 .pwords{
-  text-align: center;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 20px;
-  z-index: 2;
+    position: relative;
+    text-align: center;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    font-size: 20px;
+    z-index: 2;
+    border-radius: 0 0 8px 8px;
+    width: auto;
+    padding: 20px 50px 20px 50px;
+    background: #fff7;
+    font-weight: 400;
 }
+
+.pbuttons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 .pbuttons > * {
-  border-radius: 17px;
-  height: 34px;
-  width: 170px;
-  border: 1px solid red;
-  background: rgba(255, 38, 0, 0.2);
-  z-index: 10;
-  transition-duration: 0.4s;
+    border-radius: 25px;
+    height: 50px;
+    width: 170px;
+    border: 1px solid red;
+    background: rgba(255, 38, 0, 0.2);
+    z-index: 10;
+    font-family: Lato, 'Segoe UI', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(199, 30, 0);
+    letter-spacing: 1px;
+    transition-duration: 0.4s;
 }
 .pbuttons > *:hover {
     cursor: pointer;
     background: rgba(255, 38, 0, 0.4);
 }
 
+/* On handheld device rather than computer */
+@media screen and (max-width: 1200px) {
+    body {
+        padding: 0px;
+    }
 
-@media screen and (max-width: 1200px){
-  body{ padding: 0px; }
-  .navigation{ opacity: 0.8 }
+    .navigation {
+        background: #000;
+    }
 }
-@media screen and (max-width: 750px) {
-  .navigation {
-    display: flex;
-    flex-direction: row;
-    gap: 0px;
-    flex: 1 1 0px;
-    opacity: 1;
-  }
-  .navigation button {
-    position: relative;
-  }
-  #homebutton{ right: auto }
-  #projectbutton{ right: auto }
-  #contactbutton{ right: auto }
+
+/* Shrink navigation to fit entire screen width */
+@media screen and (max-width: 800px) {
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        flex: 1 1 0px;
+        opacity: 0.8;
+    }
+
+    .saying {
+        width: 80%;
+    }
+
+    .navigation button {
+        position: relative;
+    }
+
+    #homebutton { right: auto }
+    #projectbutton { right: auto }
+    #contactbutton { right: auto }
+
+    .nameBox {
+        font-size: 40px;
+    }
+
+    .buttonline {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 80vw;
+        height: 100vw;
+        margin: 20px auto 20px auto;
+    }
+
+    .indivprojects {
+        display: block;
+        width: 100vw;
+        height: auto;
+    }
 }
-@media screen and (max-width: 640px){
-  body{ padding: 0px; }
-  #name{ font-size: 60px; }
-  .buttonline {
-    flex-direction: column;
-  }
-  .indivprojects > div {
-    width: 80vw;
-    height: 70vw;
-    margin: 20px auto 20px auto;
-  }
-  .indivprojects{
-    display: block;
-    width: 100vw;
-    height: auto;
-  }
-}
-@media screen and (max-width: 470px){
-  body{ padding: 0px; }
-  #name{ font-size: 40px; }
-  
-  .indivprojects > div {
-    width: 80vw;
-    height: 70vw;
-    margin: 20px auto 20px auto;
-  }
-  .indivprojects{
-    display: block;
-    width: 100vw;
-  }
+
+/* Smaller phone, make everything smaller */
+@media screen and (max-width: 540px) {
+    .nameBox {
+        font-size: 30px;
+    }
+
+    .project {
+        width: 80vw;
+        height: auto;
+        margin: 20px auto 20px auto;
+    }
+
+    .ptitle {
+        flex: 1;    
+    }
+
+    .pwords {
+        padding: 20px;
+    }
+
+    .pbuttons {
+        flex-direction: column;
+    }
+
+    .pbuttons > * {
+        width: 100%;
+    }
+
+    .indivprojects{
+        display: block;
+        width: 100vw;
+    }
 }

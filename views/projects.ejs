@@ -6,8 +6,9 @@
     <title>Sean Lange's Projects</title>
     <link href="/client/projects/style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
   </head>
   <body>
     <nav class="navigation">
@@ -21,7 +22,7 @@
       <h2 class="title">Projects</h2>
       <div class="indivprojects">
         <% for(let name in projects.projects) { let project = projects.projects[name] %>
-            <div>
+            <div class="project">
                 <img src="/images/<%= project.image %>" class="projectimage" draggable="false">
                 <h2 class="ptitle"><%= name %></h2>
                 <div class="pwords">

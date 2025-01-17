@@ -1,323 +1,460 @@
 html{
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 body{
-  padding: 0px;
-  margin: 0px;
+    padding: 0px;
+    margin: 0px;
 }
 button{
-  transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 button:hover{
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.286);
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.286);
 }
 .navigation{
-  position: fixed;
-  top: -80px;
-  z-index: 3;
-  width: 100%;
-  height: 80px;
-  background: rgba(0, 0, 0, 0.8);
-  transition-duration: 0.8s;
+    position: fixed;
+    top: -80px;
+    z-index: 60;
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.8);
+    transition-duration: 0.8s;
 }
 .navigation:hover{
-  background: rgb(0, 0, 0);
+    background: rgb(0, 0, 0);
 }
 .navigation button{
-  position: absolute;
-  border: none;
-  background: none;
-  height: 80px;
-  width: 250px;
-  color: white;
-  border-left: 2px solid black;
-  font-family: Raleway;
-  font-size: 22px;
-  transition-duration: 0.4s;
+    position: absolute;
+    border: none;
+    background: none;
+    height: 80px;
+    width: 250px;
+    color: white;
+    font-family: Raleway;
+    font-size: 22px;
+    transition-duration: 0.4s;
 }
 
 .navigation button:hover{
-  background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3);
 }
 .navigation button:active{
-  background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.6);
 }
 #homebutton{ right: 500px }
 #projectbutton{ right: 250px }
 #contactbutton{ right: 0px }
 
 .top{
-  position: absolute;
-  background: url(/images/titlebackground.png);
-  width: 100%;
-  height: 115vh;
-  top: -50px;
+    position: absolute;
+    background: url(/images/background.png);
+    width: 100%;
+    height: 115vh;
+    top: -50px;
+}
+
+.fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+
+#rsc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .starterContainer {
     position: relative;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -45%);
+    width: 100%;
+    height: 100%;
     display: grid;
+    align-content: center;
     justify-items: center;
 }
 
-#name {
+.nameBox {
     position: relative;
-    top: 20px;
-    font-size: 78px;
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 1px grey;
+    height: 80px;
+    width: 100%;
+    padding: 0;
+    text-wrap: nowrap;
+    font-size: 48px;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
     text-align: center;
-    padding: auto;
-    width: 100%;
+    opacity: 0;
 }
 
-#saying {
+#name1, #name2, #name3 {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#name1 {
+    transform: translate(3px, 3px);
+    color: rgb(0, 0, 0);
+}
+
+#name2 {
+    color: rgb(161, 43, 43);
+}
+
+#name3 {
+    transform: translate(-3px, -3px);
+    color: rgb(255, 255, 255);
+}
+
+.saying {
     position: relative;
-    top: -20px;
     font-size: 1em;
-    color: rgba(255, 255, 255, 0.733);
-    font-family: 'Segoe UI', sans-serif;
+    color: rgb(255, 255, 255, 0.833);
+    font-family: Montserrat, 'Segoe UI', sans-serif;
     text-align: center;
     padding: 10px;
     width: 100%;
+    font-weight: 400;
+    margin: 60px 0 60px 0;
 }
+
 .buttonline {
-  display: flex;
-  flex-direction: row;
-  flex-gap: 20px;
-  gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-gap: 20px;
+    gap: 20px;
 }
+
 .buttonline > *{
-  background: rgba(255, 255, 255, 0);
-  width: 150px;
-  height: 40px;
-  border-radius: 12px;
-  border: 2px solid black;
-  color: white;
-  font-size: 1.125em;
-  font-family: Lato, sans-serif;
+    background: rgba(255, 255, 255, 0);
+    width: 150px;
+    height: 40px;
+    border-radius: 12px;
+    border: 2px solid black;
+    color: white;
+    font-size: 1.125em;
+    font-family: Lato, sans-serif;
 }
 
 .links {
     position: absolute;
     bottom: 40px;
     right: 20px;
+    z-index: 60;
 }
+
 .links > * {
     margin: 20px;
     width: 50px;
     opacity: 0.5;
     transition-duration: 0.4s;
 }
+
 .links:hover > * {
     opacity: 1;
     cursor: pointer;
 }
 
 #divbreakgrad{
-  position: absolute;
-  top: -51px;
-  background: black;
-  width: 100%;
-  height: 10px;
-  -webkit-transform: skewY(-2deg);
-  -moz-transform: skewY(-2deg);
-  -ms-transform: skewY(-2deg);
-  -o-transform: skewY(-2deg);
-  transform: skewY(-2deg);
+    position: absolute;
+    top: -51px;
+    background: black;
+    width: 100%;
+    height: 10px;
+    -webkit-transform: skewY(-2deg);
+    -moz-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+    -o-transform: skewY(-2deg);
+    transform: skewY(-2deg);
 }
+
 #whitediagonal{
-  position: absolute;
-  background: white;
-  height: 100px;
-  top: -46px;
-  width: 100%;
-  -webkit-transform: skewY(-2deg);
-  -moz-transform: skewY(-2deg);
-  -ms-transform: skewY(-2deg);
-  -o-transform: skewY(-2deg);
-  transform: skewY(-2deg);
+    position: absolute;
+    background: white;
+    height: 100px;
+    top: -46px;
+    width: 100%;
+    -webkit-transform: skewY(-2deg);
+    -moz-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+    -o-transform: skewY(-2deg);
+    transform: skewY(-2deg);
 }
+
 .content{
-  position: absolute;
-  top: 115vh;
-  width: 100%;
-  height: auto;
-  background: white;
+    position: absolute;
+    top: 115vh;
+    width: 100%;
+    height: auto;
+    background: white;
+    z-index: 50;
 }
+
 .projects{
-  position: relative;
-  top: 80px;
-  margin-bottom: 140px;
+    position: relative;
+    top: 80px;
+    margin-bottom: 140px;
 }
+
 .projects .title{
-  width: 100%;
-  text-align: center;
-  font-size: 40px;
-  font-family: Raleway, sans-serif;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-family: Raleway, sans-serif;
 }
+
 .indivprojects{
-  position: relative;
-  display: flex;
-  width: 100vw;
-  height: auto;
-  align-items: center;
-  justify-content: space-evenly;
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: auto;
+    align-items: center;
+    justify-content: space-evenly;
 }
+
 .project {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  position: relative;
-  width: 27vw;
-  height: 27vw;
-  border: 2px solid black;
-  border-radius: 8px;
-  padding: 5px 15px 5px 15px;
-  margin: auto;
-  transition-duration: 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 27vw;
+    height: 27vw;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin: auto;
+    transition-duration: 0.4s;
 }
 
 .project:hover {
-  cursor: pointer;
-  box-shadow: 0px 0px 8px black;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px black;
 }
+
 .projectimage{ 
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  z-index: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 1;
 }
 
 .ptitle{
-  position: relative;
-  text-align: center;
-  font-family: Roboto;
-  font-size: 32px;
-  z-index: 2;
-  font-weight: 300;
+    position: relative;
+    text-align: center;
+    font-family: Lato, 'Segoe UI', sans-serif;
+    font-size: 36px;
+    z-index: 2;
+    letter-spacing: 2px;
+    font-weight: 800;
 }
+
 .pwords{
-  position: relative;
-  text-align: center;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 20px;
-  z-index: 2;
-  font-weight: 400;
+    position: relative;
+    text-align: center;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    font-size: 20px;
+    z-index: 2;
+    border-radius: 0 0 8px 8px;
+    width: auto;
+    padding: 20px 50px 20px 50px;
+    background: #fff7;
+    font-weight: 400;
 }
+
 .pbuttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
+
 .pbuttons > * {
-  border-radius: 17px;
-  height: 34px;
-  width: 170px;
-  border: 1px solid red;
-  background: rgba(255, 38, 0, 0.2);
-  z-index: 10;
-  transition-duration: 0.4s;
+    border-radius: 25px;
+    height: 50px;
+    width: 170px;
+    border: 1px solid red;
+    background: rgba(255, 38, 0, 0.2);
+    z-index: 10;
+    font-family: Lato, 'Segoe UI', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(199, 30, 0);
+    letter-spacing: 1px;
+    transition-duration: 0.4s;
 }
 .pbuttons > *:hover {
     cursor: pointer;
     background: rgba(255, 38, 0, 0.4);
 }
-.allprojects{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  top: 40px;
-  width: 100%;
-}
-.allprojects button{
-  position: relative;
-  width: 250px;
-  height: 50px;
-  background: coral;
-  border: 2px solid red;
-  border-radius: 6px;
-  font-family: Raleway;
-  font-size: 24px;
-  text-align: center;
-}
-.aboutme{
-  position: relative;
-  display: flex;
-  width: 100%;
-  top: 40px;
-  justify-content: center;
-}
-.aboutme p{
-  font-family: Montserrat, sans-serif;
-  font-size: 20px;
-  line-height: 30px;
-  max-width: 80vw;
-  text-align: center;
-  opacity: 0.8;
-}
 
-@media screen and (max-width: 1200px){
-  body{ padding: 0px; }
-  .navigation{ background: #000 }
-}
-@media screen and (max-width: 640px){
-  body{ padding: 0px; }
-  #name{ font-size: 60px; }
-  .buttonline {
-    flex-direction: column;
-  }
-  .project {
-    width: 80vw;
-    height: 70vw;
-    margin: 20px auto 20px auto;
-  }
-  .indivprojects{
-    display: block;
-    width: 100vw;
-    height: auto;
-  }
-}
-@media screen and (max-width: 470px){
-  body{ padding: 0px; }
-  #name{ font-size: 40px; }
-  .project {
-    width: 80vw;
-    height: 70vw;
-    margin: 20px auto 20px auto;
-  }
-  .indivprojects{
-    display: block;
-    width: 100vw;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .navigation {
-    display: flex;
-    flex-direction: row;
-    gap: 0px;
-    flex: 1 1 0px;
-    opacity: 0.8;
-  }
-  .navigation button {
+.allprojects {
     position: relative;
-  }
-  #homebutton{ right: auto }
-  #projectbutton{ right: auto }
-  #contactbutton{ right: auto }
+    display: flex;
+    justify-content: center;
+    top: 40px;
+    width: 100%;
+}
+
+.allprojects button {
+    position: relative;
+    width: 250px;
+    height: 50px;
+    background: coral;
+    border: 2px solid red;
+    border-radius: 6px;
+    font-family: Raleway;
+    font-size: 24px;
+    text-align: center;
+}
+.aboutme {
+    position: relative;
+    display: flex;
+    width: 100%;
+    top: 40px;
+    justify-content: center;
+}
+.aboutme p {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 80vw;
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* All of the fading in the beginning animation */
+.fade { opacity: 1; transition-duration: 3s; z-index: 30; }
+.nameBox { opacity: 0; transition-duration: 1s; z-index: 40; }
+.saying { opacity: 0; transition-duration: 0.4s; z-index: 40; }
+.buttonline1 { opacity: 0; transition-duration: 0.4s; z-index: 40; }
+.buttonline2 { opacity: 0; transition-duration: 0.4s; z-index: 40; }
+.buttonline3 { opacity: 0; transition-duration: 0.4s; z-index: 40; }
+.links { opacity: 0; transition-duration: 1.5s; z-index: 40; }
+
+
+.fadein { opacity: 1 }
+.fadeout { opacity: 0 }
+
+/* On handheld device rather than computer */
+@media screen and (max-width: 1200px) {
+    body {
+        padding: 0px;
+    }
+    
+    .navigation {
+        background: #000;
+    }
+}
+
+/* Shrink navigation to fit entire screen width */
+@media screen and (max-width: 800px) {
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        flex: 1 1 0px;
+        opacity: 0.8;
+    }
+
+    .saying {
+        width: 80%;
+    }
+
+    .navigation button {
+        position: relative;
+    }
+
+    #homebutton { right: auto }
+    #projectbutton { right: auto }
+    #contactbutton { right: auto }
+    
+    .nameBox {
+        font-size: 40px;
+    }
+    
+    .buttonline {
+        flex-direction: column;
+    }
+    
+    .project {
+        width: 80vw;
+        height: 100vw;
+        margin: 20px auto 20px auto;
+    }
+    
+    .indivprojects {
+        display: block;
+        width: 100vw;
+        height: auto;
+    }
+}
+
+/* Smaller phone, make everything smaller */
+@media screen and (max-width: 768px) {
+    .nameBox {
+        font-size: calc(100vw / 10 - 10px);
+        letter-spacing: 1px;
+    }
+
+    #name1 {
+        transform: translate(1px, 1px);
+    }
+
+    #name3 {
+        transform: translate(-1px, -1px);
+    }
+    
+    .project {
+        width: 80vw;
+        height: auto;
+        margin: 20px auto 20px auto;
+    }
+
+    .buttonline {
+        width: 100%;
+    }
+    
+    .buttonline > * {
+        width: 80%;
+    }
+
+    .ptitle {
+        flex: 1;    
+    }
+    
+    .pwords {
+        padding: 20px;
+    }
+
+    .pbuttons {
+        flex-direction: column;
+    }
+
+    .pbuttons > * {
+        width: 100%;
+    }
+    
+    .indivprojects{
+        display: block;
+        width: 100vw;
+    }
 }
